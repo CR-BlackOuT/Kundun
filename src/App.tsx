@@ -10,7 +10,7 @@ import { HeaderIcon } from './components/icons';
 // IMPORTACIONES DE FIREBASE
 // ------------------------------------------------------------------
 import { doc, setDoc, onSnapshot } from "firebase/firestore";
-import { db } from './firebaseConfig'; 
+import { db } from './firebase-config'; 
 // ------------------------------------------------------------------
 
 const GUILD_DATA_COLLECTION = "guildData";
