@@ -33,14 +33,16 @@ const LootAssignmentModal: React.FC<LootAssignmentModalProps> = ({
     setSelectedLoot(prev => ({ ...prev, [lootId]: !prev[lootId] }));
   };
 
-  const handleAssignSelectedLoot = () => {
+const handleAssignSelectedLoot = () => {
+    console.log("handleAssignSelectedLoot llamado."); // <-- AÑADIR ESTO
     Object.keys(selectedLoot).forEach(lootId => {
-      if (selectedLoot[lootId]) {
-        onAdvanceRotation(lootId);
-      }
+        if (selectedLoot[lootId]) {
+            console.log("Asignando loot seleccionado:", lootId); // <-- AÑADIR ESTO
+            onAdvanceRotation(lootId);
+        }
     });
     onClose();
-  };
+};
 
   const getNextPlayerName = (lootId: string) => {
     const playerIndex = rotation[lootId];
@@ -72,6 +74,7 @@ const LootAssignmentModal: React.FC<LootAssignmentModalProps> = ({
                     <button
                         onClick={(e) => {
                             e.stopPropagation();
+                            console.log("Botón skip clickeado para item:", item.id); 
                             onAdvanceRotation(item.id);
                         }}
                         className="p-1 rounded-full text-gray-400 hover:bg-gray-600 hover:text-white transition-colors"

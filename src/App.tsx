@@ -109,18 +109,21 @@ const App: React.FC = () => {
     updateFirestore(newPlayers, newRotation);
   };
 
-  const advanceRotation = (lootItemId: string) => {
-    if (players.length === 0) return;
-    
-    // Calcular el nuevo estado de rotación
-    const newRotation: RotationState = {
-      ...rotation,
-      [lootItemId]: (rotation[lootItemId] + 1) % players.length,
-    };
-    
-    // SOLO LLAMAMOS A updateFirestore
-    updateFirestore(players, newRotation);
+const advanceRotation = (lootItemId: string) => {
+  console.log("advanceRotation llamada para item:", lootItemId); // <-- AÑADIR ESTO
+  if (players.length === 0) {
+    console.log("No hay jugadores cargados, advanceRotation no hará nada."); // <-- AÑADIR ESTO
+    return;
+  }
+
+  const newRotation: RotationState = {
+    ...rotation,
+    [lootItemId]: (rotation[lootItemId] + 1) % players.length,
   };
+
+  updateFirestore(players, newRotation);
+  console.log("updateFirestore llamado desde advanceRotation."); // <-- AÑADIR ESTO
+};
 
   const handleReset = () => {
     if (window.confirm("Are you sure you want to reset all data? This cannot be undone.")) {
