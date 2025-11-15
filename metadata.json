@@ -1,5 +1,5 @@
 {
-  "name": "Guild Loot Manager",
+  "name": "Guild Loot Kundun",
   "description": "A dynamic web application to manage and track loot distribution for guild bosses in a game. It replaces manual spreadsheets with an interactive table, automates player rotation for different items, and provides a simple interface to record loot drops and assign them to the next eligible player.",
   "requestFramePermissions": []
 }
