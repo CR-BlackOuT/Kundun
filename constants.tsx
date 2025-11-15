@@ -1,12 +1,12 @@
 import { LootItem, Player } from './types';
 
 export const LOOT_ITEMS: LootItem[] = [
-  { id: 'llama', name: 'Llama', icon: '/llama.jpg' },
-  { id: 'pluma', name: 'Pluma', icon: '/pluma.jpg' },
-  { id: 'chaos', name: 'Chaos', icon: '/chaos.jpg' },
-  { id: 'alma', name: 'Alma', icon: '/alma.jpg' },
-  { id: 'despertar', name: 'Despertar', icon: '/despertar.jpg' },
-  { id: 'box', name: 'Box', icon: '/box.jpg' },
+  { id: 'llama', name: 'Llama', icon: '/Llama.jpg' },
+  { id: 'pluma', name: 'Pluma', icon: '/Pluma.jpg' },
+  { id: 'chaos', name: 'Chaos', icon: '/Chaos.jpg' },
+  { id: 'alma', name: 'Alma', icon: '/Alma.jpg' },
+  { id: 'despertar', name: 'Despertar', icon: '/Despertar.jpg' },
+  { id: 'box', name: 'Box', icon: '/Box.jpg' },
 ];
 
 export const INITIAL_PLAYERS: Player[] = [
