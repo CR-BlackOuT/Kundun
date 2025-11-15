@@ -110,7 +110,7 @@ const App: React.FC = () => {
           <div className="flex items-center justify-center gap-4">
             <HeaderIcon />
             <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
-              Guild Loot Manager
+              Guild Loot Kundun
             </h1>
           </div>
           <p className="text-gray-400 mt-2">Track boss loot and manage player rotation with ease.</p>
